@@ -4,7 +4,4 @@ const router = express()
 
 router.post("/ai-review", aiController.getReview)
 
-
-
-
 module.exports = router
