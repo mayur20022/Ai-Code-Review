@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { Swords, SendHorizontal } from 'lucide-react';
 import Header from './component/Header';
 import axios from "axios";
-import Markdown from "react-markdown"
-import rehypeHighlight from "rehype-highlight"
-import "highlight.js/styles/github-dark.min.css"
 
 function App() {
   const [code, setCode] = useState('');
@@ -42,7 +39,7 @@ function App() {
             <div className="grid lg:grid-cols-2 gap-12">
 
               {/* Input Section */}
-              <div className="space-y-6 arise " style={{ animationDelay: '0.2s' }}>
+              <div className="space-y-6 arise" style={{ animationDelay: '0.2s' }}>
                 <div className="flex items-center gap-4">
                   <h2 className="text-3xl font-bold text-[#E891DF]">Summon Your Code</h2>
                   <div className="flex-1 h-px bg-gradient-to-r from-[#E891DF]/50 to-transparent"></div>
@@ -52,7 +49,6 @@ function App() {
                   <div className="relative group">
                     <textarea
                       value={code}
-                      required
                       onChange={(e) => setCode(e.target.value)}
                       className="w-full h-[400px] p-6 rounded-lg bg-[#49207A]/10 
                                  text-white placeholder-gray-400 transition-all duration-300
@@ -78,7 +74,7 @@ function App() {
               {isVerdict && (
                 <div
                   key={animateKey}
-                  className="space-y-6  w-full arise arise-text"
+                  className="space-y-6  arise arise-text"
                   style={{ animationDelay: '0.4s' }}
                 >
                   <div className="flex items-center gap-4">
@@ -90,9 +86,7 @@ function App() {
                     <div className="no-scrollbar h-full overflow-x-hidden overflow-y-auto p-4 rounded-lg">
                       {verdict ? (
                         <pre className="text-sm whitespace-pre-wrap">
-                          <Markdown
-                            rehypePlugins={[rehypeHighlight]}  
-                          > {verdict}</Markdown>
+                          <code>{verdict}</code>
                         </pre>
                       ) : (
                         <div className="h-full flex items-center justify-center text-white">
