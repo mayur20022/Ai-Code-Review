@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <div className="bg-black ">
+    <div className="bg-black">
       <div className="h-full bg-[#0E051F]/40 text-white relative">
         {/* Background */}
         <div className="fixed inset-0 bg-[url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?fit=crop&w=2000&q=80')] bg-cover bg-center opacity-20"></div>
@@ -35,7 +35,7 @@ function App() {
         <Header />
 
         <div className="relative z-10">
-          <main className="max-w-[1500px] h-screen mx-auto px-6 py-12">
+          <main className="max-w-[1500px] min-h-screen mx-auto px-6 py-12">
             <div className="grid lg:grid-cols-2 gap-12">
 
               {/* Input Section */}
