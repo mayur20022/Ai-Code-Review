@@ -11,7 +11,7 @@ export default function Header() {
                             <Swords className="w-10 h-10 text-[#E891DF]" />
                             <div className="absolute inset-0 bg-[#E891DF]/30 blur-xl"></div>
                         </div>
-                        <h1 className="ld:text-4xl font-bold bg-gradient-to-r from-[#E891DF] via-[#8A2BE2] to-[#E891DF] text-transparent bg-clip-text">
+                        <h1 className="lg:text-4xl font-bold bg-gradient-to-r from-[#E891DF] via-[#8A2BE2] to-[#E891DF] text-transparent bg-clip-text">
                             Shadow Monarch's Code Review
                         </h1>
                     </div>
